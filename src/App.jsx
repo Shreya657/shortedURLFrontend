@@ -5,7 +5,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, useNavigate} from "react-router-dom"
 
 import Home from './components/Home.jsx'
-import Link from './components/link.jsx'
+import Url from './components/Url.jsx'
 
 
 function App() {
@@ -17,9 +17,8 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/url" element={<Link />} />
           <Route path="/" element={<Home />} />
-          
+          <Route path="/url" element={<Url/>} />
         </Routes>
       </Router>
       

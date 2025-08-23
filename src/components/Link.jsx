@@ -42,7 +42,7 @@ const Link = () => {
 
   return (
     <div className='link-container'>
-      <h1>Shorten Your Link by Chota Kar! ✅</h1>
+      <h1>Shorten Your Link  Chota Kar! ✅</h1>
       <div className='input-container'>
         <form onSubmit={handleShort}>
       <input
@@ -59,20 +59,28 @@ const Link = () => {
       </div>
 
 
-      {loading && <LoadingSpinner />}
+      {/* {loading && <LoadingSpinner />} */}
 
-      <div className={shortUrl ? 'output-container' : ''}>
-      {error &&!shortUrl&& <h3 style={{ color: 'red' }}>{error}</h3>}
-      {shortUrl &&  (
+      <div className= 'output-container'>
+      {/* {error &&!shortUrl&& <h3 style={{ color: 'red' }}>{error}</h3>} */}
+      {/* {shortUrl &&  (
         <h4 style={{ color: 'green' }}>
           Short URL state:              {<a style={{ paddingLeft: "20px" ,paddingRight: "20px"}} href={shortUrl} target="_blank" rel="noopener noreferrer">{shortUrl}</a>}
           
           
         </h4>
-      )}
-      {shortUrl && (
+      )} */}
+       
+        <h4 style={{ color: 'green' }}>
+          Short URL state:              {<a style={{ paddingLeft: "20px" ,paddingRight: "20px"}} href="http://shortenurl-production-7e6f.up.railway.app/1t5eEuCp" target="_blank" rel="noopener noreferrer">http://shortenurl-production-7e6f.up.railway.app/1t5eEuCp</a>}
+          
+          
+        </h4>
+      
+      
+      {/* {shortUrl && ( */}
         <button onClick={handleCopy}><FiCopy style={{  fontSize: "19px", cursor: "pointer" ,border: "none",paddingLeft: "5px"}} /></button>
-      )}
+      {/* )} */}
       {copied && <span style={{ color: "green" }}>Copied!</span>}
         
 

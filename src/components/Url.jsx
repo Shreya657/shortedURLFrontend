@@ -61,28 +61,23 @@ const Url = () => {
 
       {loading && <LoadingSpinner />}
 
-      <div className={shortUrl ? 'output-container' : ''}>
+      <div className= {shortUrl?'output-container':""} >
       {error &&!shortUrl&& <h3 style={{ color: 'red' }}>{error}</h3>}
       {shortUrl &&  (
         <h4 style={{ color: 'green' }}>
-          Short URL state:              {<a style={{ paddingLeft: "20px" ,paddingRight: "20px"}} href={shortUrl} target="_blank" rel="noopener noreferrer">{shortUrl}</a>}
+          Short URL state:              {<a style={{ paddingLeft: "20px" ,paddingRight: "20px"}} href={shortUrl} target="_blank" rel="noopener noreferrer">http://shortenurl-production-7e6f.up.railway.app/1t5eEuCp</a>}
           
           
         </h4>
-      )}
+       )} 
       {shortUrl && (
-        <button onClick={handleCopy}><FiCopy style={{  fontSize: "19px", cursor: "pointer" ,border: "none",paddingLeft: "5px"}} /></button>
+        <button className='copy' onClick={handleCopy}><FiCopy className='copy-icon'/></button>
       )}
-      {copied && <span style={{ color: "green" }}>Copied!</span>}
-        
-
-
-
-      
+      {copied && <span className='copy-message'>Copied!</span>}
       </div>
       {expiredAt && (
         <p style={{ color: "yellow"  ,paddingTop: "30px"}}>Link expires at: {new Date(expiredAt).toLocaleString() || "N/A"}</p>
-      )}
+       )} 
 
     </div>
   )

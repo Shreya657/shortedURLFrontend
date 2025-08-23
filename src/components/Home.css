@@ -17,12 +17,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+      border: 2px solid #eee;
+    border-radius: 30px;
 }
 .home-container h1 {
     font-size: 3rem;
     margin-top: 5rem;
     margin-bottom: 4rem;
-    color: #333;
+    color: white;
 }
 .home-container h2 {
     font-size: 2rem;
@@ -61,4 +63,27 @@
   width: 800px;
   padding: 2rem;
   
+}
+
+/* //responsive */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 1rem;
+    }
+    .home-container h1 {
+        font-size: 2.5rem;
+    margin-top: 0;
+    }
+    .home-container h2 {
+        font-size: 1.5rem;
+    }
+    .home-container p {
+        font-size: 1rem;
+    }
+    .home-container button {
+        font-size: 1.2rem;
+    }
+    .intro {
+        width: 100%;
+    }
 }

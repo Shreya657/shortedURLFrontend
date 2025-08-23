@@ -42,7 +42,7 @@ const Url = () => {
 
   return (
     <div className='link-container'>
-      <h1>Shorten Your Links in a Snap with Chota Kar! ✅</h1>
+      <h1>Shorten Your Link by 'Chota Kar'</h1>
       <div className='input-container'>
         <form onSubmit={handleShort}>
       <input

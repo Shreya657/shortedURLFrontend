@@ -21,14 +21,16 @@ const Url = () => {
     setLoading(true);
     setError("");
     try {
-      const res = await api.post('', input);
+      const res = await api.post('/', input);
       setShortUrl(res.data.data.shortUrl); // save the short URL in state
       setInput({ originalUrl: "" }); // clear input field
       setExpiredAt(res.data.data.expiredAt); // save expiration time
       console.log(res.data);
       console.log(res.data.data.shortUrl);
     } catch (err) {
+       console.error(err);
       setError(err.response?.data?.message || "Failed to shorten link");
+     
     } finally {
       setLoading(false);
     }
@@ -65,7 +67,7 @@ const Url = () => {
       {error &&!shortUrl&& <h3 style={{ color: 'red' }}>{error}</h3>}
       {shortUrl &&  (
         <h4 style={{ color: 'green' }}>
-          Short URL state:              {<a style={{ paddingLeft: "20px" ,paddingRight: "20px"}} href={shortUrl} target="_blank" rel="noopener noreferrer">http://shortenurl-production-7e6f.up.railway.app/1t5eEuCp</a>}
+          Short URL state:              {<a style={{ paddingLeft: "20px" ,paddingRight: "20px"}} href={shortUrl} target="_blank" rel="noopener noreferrer">{shortUrl}</a>}
           
           
         </h4>
